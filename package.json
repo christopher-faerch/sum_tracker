@@ -1,0 +1,14 @@
+{
+  "name": "sum-tracker",
+  "version": "0.1.0",
+  "description": "Summoner spell tracker overlay for League of Legends",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "demo": "electron . --demo"
+  },
+  "devDependencies": {
+    "electron": "^45.1.0"
+  }
+}

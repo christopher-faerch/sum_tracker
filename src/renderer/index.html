@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://ddragon.leagueoflegends.com; style-src 'self'"
+    />
+    <title>Sum Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="panel">
+      <header id="handle">
+        <span>Sum Tracker</span>
+        <span id="clock">--:--</span>
+        <button id="quit" title="Quit">×</button>
+      </header>
+      <div id="status">Waiting for a game…</div>
+      <ul id="players"></ul>
+      <footer>Num1-5: Flash · Ctrl+Num1-5: other · Right-click: reset</footer>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

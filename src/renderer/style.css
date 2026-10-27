@@ -1,0 +1,164 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  background: transparent;
+  font-family: 'Segoe UI', sans-serif;
+  color: #e8e6e3;
+  user-select: none;
+  overflow: hidden;
+}
+
+#panel {
+  width: 300px;
+  background: rgba(10, 14, 20, 0.82);
+  border: 1px solid rgba(200, 170, 110, 0.5);
+  border-radius: 6px;
+}
+
+#handle {
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: #c8aa6e;
+  border-bottom: 1px solid rgba(200, 170, 110, 0.3);
+}
+
+#clock {
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+#quit {
+  -webkit-app-region: no-drag;
+  background: none;
+  border: none;
+  color: #c8aa6e;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#status {
+  padding: 8px;
+  font-size: 12px;
+  color: #a09b8c;
+}
+
+#status:empty {
+  display: none;
+}
+
+#players {
+  list-style: none;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+}
+
+.hotkey {
+  width: 10px;
+  font-size: 11px;
+  color: #6b6760;
+  text-align: center;
+}
+
+.champ {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background: #1e2328;
+  object-fit: cover;
+}
+
+.champ-name {
+  flex: 1;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.boots {
+  font-size: 10px;
+  color: #0ac8b9;
+}
+
+.ci {
+  width: 26px;
+  height: 20px;
+  font-size: 10px;
+  background: #1e2328;
+  color: #a09b8c;
+  border: 1px solid #3c3c41;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ci.on {
+  color: #0ac8b9;
+  border-color: #0ac8b9;
+}
+
+.spell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #3c3c41;
+  border-radius: 4px;
+  background: #1e2328 center / cover no-repeat;
+  cursor: pointer;
+  font-size: 9px;
+  color: #a09b8c;
+}
+
+.spell.cooling::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.spell .time {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 0 3px #000;
+}
+
+.spell.ready-flash {
+  animation: ready 1s ease-out 3;
+}
+
+@keyframes ready {
+  0% {
+    box-shadow: 0 0 0 0 rgba(10, 200, 185, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 0 8px rgba(10, 200, 185, 0);
+  }
+}
+
+footer {
+  padding: 4px 8px;
+  font-size: 10px;
+  color: #6b6760;
+  border-top: 1px solid rgba(200, 170, 110, 0.2);
+}
